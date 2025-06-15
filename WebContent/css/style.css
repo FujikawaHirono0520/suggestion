@@ -1,0 +1,267 @@
+body{
+    font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 2em;
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+/* ヘッダー全体をFlexで左右分離 */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 16px;
+    min-width: 90px;
+}
+
+nav li:not(:last-child) {
+    border-right: 2px solid #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+nav a.current {
+    color: #0010f0;
+    border-bottom: 2px solid #0010f0;
+}
+
+nav a:hover {
+    color: #6a5acd;
+    border-bottom: 2px solid #b3a7ff;
+    background-color: #f5f5ff;
+    border-radius: 4px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-btn {
+    background-color: #d6c9f2;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #ccc;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #bca9f0;
+}
+
+
+h1{
+    font-size: 2.5em;
+    margin-top: 30px;
+}
+
+#next-prev {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /*ボタン同士の間隔*/
+    margin-bottom: 20px;
+}
+
+#next-prev button{
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    margin: 0;
+}
+
+#next-prev button:hover{
+    background-color: #c0b5ff;
+    border-color: #c0b5ff;
+}
+
+#prev {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.sun{
+    color: rgb(255, 138, 155);
+}
+
+.sat{
+    color: rgb(76, 204, 255);
+}
+
+.today {
+    color: #fff;
+    background-color: #c0b5ff;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+table th, table td {
+  border: solid 1px black;
+}
+
+table th{
+    font-weight: normal;
+    padding: 10px;
+    background-color: #f2f0ff;
+}
+
+table td{
+    text-align: right;
+    padding: 3px 10px;
+}
+
+td:first-child{
+    color: rgb(255, 138, 155);
+}
+
+td:last-child{
+    color: rgb(76, 204, 255);
+}
+
+.modal{
+    /*初めは非表示*/
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #f2f0ff;
+}
+
+.modal-content{
+    font-size: large;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 0 0 10px #110299;
+}
+
+.close{
+    color: #c0b5ff;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-message{
+    text-align: left;
+    margin: auto;
+}
+
+select, button {
+    font-size: 1em;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #3b3055;
+}
+
+button{
+    background-color: #d8bfff;
+    color: #3e2072;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    background-color: #c7aefb;
+}
+
+.coordination-form{
+    font-size: 20px;
+}
+
+.result{
+    color: rgb(0, 0, 0);
+    max-width: 500px;
+    margin: 2em auto;
+    width: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 20px;
+    background-color: #f8f3ff;
+    box-shadow: 1px 1px 5px #3b3055;
+}
+
+.style{
+    font-size: 30px;
+}
+
+.font-stress{
+    font-size: 1.3em;
+    color: #c1a6eb;
+    display: block;
+    font-weight: bold;
+}
+
+.message{
+    font-size: 20px;
+}
+
+.fortune-button{
+    margin-top: 100px;
+}
+
+.fortune-result{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    max-width: 500px;
+    margin: 2em auto;
+    width: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 16px;
+    padding: 20px;
+    background-color: #f8f3ff;
+    box-shadow: 1px 1px 5px #3b3055;
+}
