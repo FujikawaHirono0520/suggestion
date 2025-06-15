@@ -10,7 +10,7 @@ public class CoordinationDao extends Dao {
         Connection con = getConnection();
 
         // まず指定の日付がすでに存在するか確認
-        String checkSql = "SELECT COUNT(*) FROM coordination WHERE date = ?";
+        String checkSql = "select count(*) from coordination where date = ?";
         PreparedStatement check = con.prepareStatement(checkSql);
         check.setString(1, date);
         ResultSet rs = check.executeQuery();
@@ -24,7 +24,7 @@ public class CoordinationDao extends Dao {
 
         if (exists) {
             // UPDATE
-            String updateSql = "UPDATE coordination SET id =? mood=?, weather=?, temperature=?, style=?, message=? WHERE date=?";
+            String updateSql = "update coordination set id =? mood=?, weather=?, temperature=?, style=?, message=? WHERE date=?";
             PreparedStatement updateSt = con.prepareStatement(updateSql);
             updateSt.setString(1, id);
             updateSt.setString(2, mood);
@@ -37,7 +37,7 @@ public class CoordinationDao extends Dao {
             updateSt.close();
         } else {
             // INSERT
-            String insertSql = "INSERT INTO coordination (id, date, mood, weather, temperature, style, message) VALUES (?, ?, ?, ?, ?, ?)";
+            String insertSql = "insert into coordination (id, date, mood, weather, temperature, style, message) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement insertSt = con.prepareStatement(insertSql);
             insertSt.setString(1, id);
             insertSt.setString(2, date);
