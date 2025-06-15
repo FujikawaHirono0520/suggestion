@@ -4,6 +4,7 @@
 
     <h1>ログイン</h1>
 
+	<!-- メッセージの表示 -->
     <c:if test="${not empty message}">
         <p style="color: red; text-align: center;">${message}</p>
     </c:if>
@@ -16,4 +17,5 @@
     </form>
 
 <%@ include file="../tool/footer.jsp" %>
+<!--JavaScriptの読み込み-->
 <script src="../js/login.js"></script>

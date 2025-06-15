@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>朝晩の悩みを解決</title>
+	<title>コーディネート提案</title>
 	<!--外部スタイルシートの読み込み-->
 	<link rel="stylesheet" href="../css/style.css">
 </head>

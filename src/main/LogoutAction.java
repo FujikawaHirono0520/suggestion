@@ -13,6 +13,7 @@ public class LogoutAction extends Action {
 
         HttpSession session = request.getSession();
 
+        //ユーザー情報の削除
         if (session.getAttribute("user") != null && session.getAttribute("user") != null) {
             session.removeAttribute("user");
             return "/jsp/logout.jsp";
